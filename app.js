@@ -24,7 +24,7 @@ function getDiscount(disc){
 //discount showing in webpage
 const getUserAmount = function(){
 
-    if(inputVal.value==''){
+    if(inputVal.value=='' || inputPercentage.value ==''){
         alert("Please enter your amount and percentage.")
     }else{
         amount = inputVal.value;
