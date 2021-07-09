@@ -29,7 +29,7 @@ const getUserAmount = function(){
     }else{
         amount = inputVal.value;
         percentage = inputPercentage.value
-        let discountAmount = getDiscount(percentage/100);
+        let discountAmount = getDiscount((percentage/100));
         let customerDiscount = Math.floor(discountAmount(amount))
         console.log(customerDiscount);
         let saveAmount = Math.floor(amount-customerDiscount);
