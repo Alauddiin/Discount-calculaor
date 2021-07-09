@@ -15,7 +15,7 @@ let percentage = inputPercentage.value
 //discount calculating function
 function getDiscount(disc){
     return (price)=>{
-        return Math.abs(price - price*disc)
+        return Math.abs(price - price*disc);
     }
 }
 
