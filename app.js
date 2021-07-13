@@ -32,7 +32,7 @@ const getUserAmount = function(){
         let discountAmount = getDiscount(Math.abs((percentage/100)));
         let customerDiscount = Math.abs(discountAmount(amount))
         console.log(customerDiscount);
-        let saveAmount =Math.abs(amount-customerDiscount);
+        let saveAmount =Math.round(amount-customerDiscount);
         let saveAmntMsg= document.createTextNode(`Congratulations! You have saved: ${saveAmount}TK & discounted amount is ${customerDiscount}TK.`)
         savedAmountPara.className="saved-amount-para"
         savedAmountPara.style.display="block"
