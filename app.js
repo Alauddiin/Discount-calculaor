@@ -15,7 +15,7 @@ let percentage = inputPercentage.value
 //discount calculating function
 function getDiscount(disc){
     return (price)=>{
-        return Math.abs(price - price*disc);
+        return Math.abs(price - price*disc).toPrecision(7);
     }
 }
 
@@ -29,10 +29,10 @@ const getUserAmount = function(){
     }else{
         amount = inputVal.value;
         percentage = inputPercentage.value
-        let discountAmount = getDiscount(Math.abs((percentage/100)));
-        let customerDiscount = Math.abs(discountAmount(amount));
+        let discountAmount = getDiscount(Math.abs((percentage/100)).toPrecision(7));
+        let customerDiscount = Math.abs(discountAmount(amount)).toPrecision(7);
         console.log(customerDiscount);
-        let saveAmount =Math.abs(amount-customerDiscount);
+        let saveAmount =Math.abs(amount-customerDiscount).toPrecision(7);
         let saveAmntMsg= document.createTextNode(`Congratulations! You have saved: ${saveAmount}TK & discounted amount is ${customerDiscount}TK.`)
         savedAmountPara.className="saved-amount-para"
         savedAmountPara.style.display="block"
